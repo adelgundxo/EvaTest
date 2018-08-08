@@ -27,6 +27,7 @@ public class Main {
     }
 
     System.out.println("Rotate Distance :" + rotateDistance);
-    //put your code here
+    System.out.println("Rotate Distance :" + rotateDistance);
+
   }
 }
