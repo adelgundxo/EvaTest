@@ -5,8 +5,9 @@ import java.util.*;
 public class Operations {
   private String s;
   private double sum;
-  private int amountOfNumbers;
   private double product;
+  private double sumToDivide;
+  private double division;
 
 
   public Operations() {
@@ -14,15 +15,13 @@ public class Operations {
   }
 
 
-  public void doSomeMath(Map<Integer, Double> map) {
-    amountOfNumbers = 0;
+  public void doSomeMath(Map<Integer, Double> map, int amount) {
 
-    for (Map.Entry<Integer, Double> counter : map.entrySet()) {
-      amountOfNumbers++;
-    }
-    System.out.println(amountOfNumbers + "Numbers added.");
+
+    System.out.println(amount+ "Numbers added.");
     sum(map);
     multiply(map);
+    calculateMean(map, amount);
 
   }
 
@@ -44,7 +43,7 @@ public class Operations {
     for(Map.Entry<Integer, Double> mult : map.entrySet()){
       product = product * mult.getValue();
     }
-    System.out.println(product);
+    System.out.println("This is the product: " + product);
   }
 
   private void print(double sum) {
@@ -54,6 +53,18 @@ public class Operations {
 
 
   }
+
+  private void calculateMean(Map<Integer,Double> map, int amount){
+
+
+    for(Map.Entry<Integer, Double> peers : map.entrySet()){
+        sumToDivide += peers.getValue();
+    }
+
+    division = sumToDivide/((double)(amount));
+    System.out.println("This is the mean value: " + division);
+  }
+
 
 
 }

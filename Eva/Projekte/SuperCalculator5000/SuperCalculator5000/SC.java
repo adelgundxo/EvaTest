@@ -23,7 +23,7 @@ public class SC {
     }
 
     Operations operation = new Operations();
-    operation.doSomeMath(map);
+    operation.doSomeMath(map, randomAmount);
 
   }
 
