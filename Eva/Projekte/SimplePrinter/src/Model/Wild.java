@@ -36,5 +36,9 @@ public class Wild {
     }
   }
 
+  public void runSmooth(){
+    System.out.println("This is a String: " + u);
+  }
+
 
 }
