@@ -6,6 +6,7 @@ public class Operations {
   private String s;
   private double sum;
   private int amountOfNumbers;
+  private double product;
 
 
   public Operations() {
@@ -21,6 +22,7 @@ public class Operations {
     }
     System.out.println(amountOfNumbers + "Numbers added.");
     sum(map);
+    multiply(map);
 
   }
 
@@ -36,10 +38,20 @@ public class Operations {
     this.print(sum);
   }
 
+  private void multiply(Map<Integer,Double> map){
+    product = 0.0;
+
+    for(Map.Entry<Integer, Double> mult : map.entrySet()){
+      product = product * mult.getValue();
+    }
+    System.out.println(product);
+  }
+
   private void print(double sum) {
 
     System.out.println(s);
     System.out.println("This is the sum of many or not so many random values: " + sum);
+
 
   }
 
