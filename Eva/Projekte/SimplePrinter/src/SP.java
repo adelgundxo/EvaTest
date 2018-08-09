@@ -1,3 +1,5 @@
+import Model.Wild;
+
 public class SP {
 
   public static void main(String[] args){
@@ -6,6 +8,8 @@ public class SP {
     String b = "ba";
     printRecur(s , i);
     printIter(b, i);
+    Wild wild = new Wild(s,b);
+    wild.runWild();
   }
 
   public static void printRecur(String s, int i){
