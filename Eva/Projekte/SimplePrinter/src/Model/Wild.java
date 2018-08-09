@@ -5,6 +5,7 @@ import static java.lang.Thread.sleep;
 public class Wild {
   private String u;
   private String s;
+  private int lel = 10;
 
   public Wild(String s, String u){
     this.s = s;
@@ -39,6 +40,12 @@ public class Wild {
   public void runSmooth(){
     System.out.println("This is a String: " + u);
     System.out.println("This is a String too: " + s);
+    try {
+      sleep(20);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    System.out.println("This is not a String: " + lel);
   }
 
 
