@@ -10,6 +10,7 @@ public class SP {
     printIter(b, i);
     Wild wild = new Wild(s,b);
     wild.runWild();
+    wild.runSmooth();
   }
 
   public static void printRecur(String s, int i){
